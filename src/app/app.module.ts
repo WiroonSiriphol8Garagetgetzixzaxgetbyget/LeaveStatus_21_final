@@ -27,12 +27,16 @@ import { ModalWorkPageModule } from '../pages/modal-work/modal-work.module';
 import { ModalWorkPage } from '../pages/modal-work/modal-work';
 import { ModalSummerPageModule } from '../pages/modal-summer/modal-summer.module';
 import { ModalUpsetPageModule } from '../pages/modal-upset/modal-upset.module';
+import { List1Page } from '../pages/list1/list1';
+import { List2Page } from '../pages/list2/list2';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     ListPage,
+    List1Page,
+    List2Page,
     LeavePage,
     TimelinePage,
     TimelineComponent,
@@ -56,6 +60,8 @@ import { ModalUpsetPageModule } from '../pages/modal-upset/modal-upset.module';
     HomePage,
     ListPage,
     LeavePage,
+    List1Page,
+    List2Page,
     TimelinePage,
     ModalPage,
     ModalSummerPage,
