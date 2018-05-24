@@ -3,16 +3,35 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
+    <ion-title id="header">ข้อมูลทั่วไป</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h3>Ionic Menu Starter</h3>
-
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+  <div *ngFor="let item of count_NOT_attention_person">
+    <ion-icon id="contact" name="md-contact" item-start large></ion-icon>
+    <h1>{{item.NAME}}</h1>
+    <h3>{{item.hire_name}}</h3>
+    <br>
+    <div id="status">
+      <span id="status2" align="center">สถานะการมาทำงาน</span>
+      <br>
+      <span id="status3">ณ วันที่ {{item.time_end}}</span>
+    </div>
+    <ion-item>
+      <div id="time">
+        <span>เวลาเข้า-ออกงาน : 00.00น. - 00.00น.</span>
+      </div>
+    </ion-item>
+    <div id="history">
+      <span id="status2">ประวัติการมาทำงาน</span>
+      <br>
+      <span id="status3">ตั้งแต่วันที่ {{item.time_start}} ถึง {{item.time_end}}</span>
+    </div>
+    <br>
+    <ion-list>
+      <button ion-button full outline (click)="show_modal_work($arr_leave_person)">มาทำงาน</button>
+      <button ion-button full outline (click)="show_modal_summer($event,$arr_leave_person)">ไม่มาทำงาน</button>
+    </ion-list>
+  </div>
 </ion-content>

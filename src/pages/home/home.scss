@@ -1,3 +1,55 @@
-page-home {
 
+#contact {
+    font-size: 100px; //Preferred size here
+    margin-top: 30px;
+    margin-left: 37%;
+    color: rgb(0, 162, 255);
+}
+h1,h3,p{
+    text-align: center;
+}
+p{
+    font-size: 12px; 
+}
+#status{
+    height: 50px;
+    color: white;
+    background-color:   rgb(0, 162, 255);
+}
+#status2{
+    height: 50px;
+    color: white;
+    margin-left: 70px;
+    font-size: 20px;
+     text-align: center;
+}
+#status3{
+    height: 50px;
+    color: white;
+    margin-left: 15px;
+    font-size: 15px;
+    
+}
+h1{
+    color:  rgb(0, 162, 255);
+}
+#history{
+    color: white;
+    height: 50px;
+    font-size: 120%;
+    background-color:   rgb(0, 162, 255);
+}
+.data_modal{
+    color : white;
+    width: 250px;
+    margin-left: 15px;
+    background-color:   rgb(0, 162, 255);
+}
+#time{
+    font-size: 15px;
+    height: 50px;
+    margin-left: 15px;
+}
+#header{
+    text-align: center;
 }

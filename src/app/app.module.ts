@@ -10,11 +10,13 @@ import { TimelinePage } from '../pages/timeline/timeline';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { FormsModule } from '@angular/forms';
 
 import { TimelineComponent } from '../components/timeline/timeline';
 import { TimelineTimeComponent } from '../components/timeline/timeline';
 import { TimelineItemComponent } from '../components/timeline/timeline';
 import { ShowProvider } from '../providers/show/show';
+import { ServiceLeaveProvider } from '../providers/show/service-leave';
 
 import { HttpModule } from '@angular/http';
 
@@ -33,7 +35,8 @@ import { HttpModule } from '@angular/http';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    HttpModule
+    HttpModule,
+    FormsModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -47,7 +50,8 @@ import { HttpModule } from '@angular/http';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    ShowProvider
+    ShowProvider,
+    ServiceLeaveProvider
   ]
 })
 export class AppModule {}
