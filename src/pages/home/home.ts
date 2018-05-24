@@ -26,7 +26,7 @@ export class HomePage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad HomePage');
-    this.leave_person_provider.get_Leave_person().then((data: any) => {
+    this.leave_person_provider.get_Leave_person2().then((data: any) => {
       this.attention_person = data.attention_person;
       this.count_attention_person = data.count_attention_person;
       this.NOT_attention_person = data.NOT_attention_person;

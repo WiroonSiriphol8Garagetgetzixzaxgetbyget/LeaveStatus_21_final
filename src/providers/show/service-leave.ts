@@ -28,4 +28,18 @@ export class ServiceLeaveProvider {
     });  
   }
 
+  get_Leave_person2() {
+    return new Promise((resolve, reject) => {
+      let url = 'https://10.80.39.23/pcksite/index.php/hr/leaves/Service_Test_team7/Flow';
+      return this.http.get(url).map((res) => res.json()).subscribe(data => {
+        this.get_Leave_person = data;
+        resolve(data);
+        //console.log(data);
+      });
+      // error =>{
+      //   reject(error);
+      // });
+    });
+  }
+
 }
