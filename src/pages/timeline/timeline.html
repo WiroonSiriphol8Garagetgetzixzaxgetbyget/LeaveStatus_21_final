@@ -1,0 +1,74 @@
+<!-- <!--
+  Generated template for the TimelinePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header>
+  <ion-navbar>
+    <ion-title *ngFor="let head_items of head_item">
+      <div *ngIf="head_items.lhis_id==form_send_id">
+            {{head_items.leave_name}}
+    </div>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <timeline>
+    <timeline-item *ngFor="let item of items">
+        <div *ngIf="item.apfp_bill_id==form_send_id">
+        <timeline-time></timeline-time>
+         <div *ngIf="item.apfp_status=='Y'">
+          <ion-icon  style="background-color:green">{{item.apfp_seq}}</ion-icon>
+        </div>
+        <div *ngIf="item.apfp_status!='Y'">
+          <ion-icon style="background-color:red">{{item.apfp_seq}}</ion-icon>
+        </div>
+        <ion-card>
+          <ion-card-header>
+            <ion-row>
+              <ion-col>
+                <label class="font">สถานะ :</label>
+                <label class="font1">{{item.apfp_status_name}}</label>
+              </ion-col>
+            </ion-row>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-grid>
+              <ion-row>
+                <ion-col>
+                  <label class="font">ผู้ดำเนินการ :</label>
+                  <label class="font1"> {{item.Name}}</label>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                  <label class="font">ตำแหน่ง :</label>
+                  <label class="font1">{{item.apfp_apdept_name}}</label>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                  <label class="font">ดำเนินการ :</label>
+                  <label class="font1">{{item.apfp_apact_name}}</label>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                  <label class="font">วันที่ดำเนินการ :</label>
+                  <label class="font1">{{item.apfp_approve_date}}</label>
+                </ion-col>
+              </ion-row>
+
+
+            </ion-grid>
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </timeline-item>
+
+  </timeline>
+  <!-- <button (click)="Back()" float-right>back</button> -->
+</ion-content>

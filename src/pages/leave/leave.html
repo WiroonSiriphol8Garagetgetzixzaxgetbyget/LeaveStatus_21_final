@@ -1,0 +1,94 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>leave</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <ion-item *ngFor="let arr of arr_leavelists,let i = index">
+
+    <ion-card class="card">
+      <ion-row float-right>
+        <ion-icon name="md-close-circle" color="danger" (click)="remove(i)"></ion-icon>
+      </ion-row>
+
+      <ion-grid (click)="Getdetail(arr.lhis_id)">
+        <ion-row>
+
+          <ion-col col-6 text-center class="">
+            <ion-col>
+              <label class="font">{{arr.leave_name}}</label>
+            </ion-col>
+            <img class="img" [src]="'http://1.bp.blogspot.com/-VIvY1WjP0tg/UnebYgTkdkI/AAAAAAAAAJ4/uNBtLEk98Is/s1600/00000000000000005065.jpg'"
+              padding>
+          </ion-col>
+
+          <ion-col col-6 text-center class="">
+            <ion-row>
+              <br>
+              <br>
+            </ion-row>
+            <!-- <ion-row>
+            </ion-row> -->
+            <ion-row>
+              <ion-col text-left>
+                <b class="font1">วันที่ลา : </b>
+              </ion-col>
+              <ion-col text-right>
+                <label class="font1">{{arr.lhis_start_date}}</label>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col text-right>
+                <label>ถึง</label>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col text-right>
+                <label class="font1">{{arr.lhis_end_date}}</label>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <br>
+              <br>
+              <br>
+            </ion-row>
+            <ion-row>
+              <b class="font1">สถานะ : </b>
+              <div *ngIf="arr.lhis_status == 'Y'">
+                <ion-icon name="ios-time" color="secondary"></ion-icon>
+              </div>
+              <div *ngIf="arr.lhis_status == 'W'">
+                <ion-icon name="ios-time" style="color:yellow"></ion-icon>
+              </div>
+              <div *ngIf="arr.lhis_status == 'E'">
+                <ion-icon name="ios-time" style="color:yellow"></ion-icon>
+              </div>
+              <div *ngIf="arr.lhis_status == 'N'">
+                <ion-icon name="ios-time" color="danger"></ion-icon>
+              </div>
+              <div *ngIf="arr.lhis_status == 'C'">
+                <ion-icon name="ios-time" color="danger"></ion-icon>
+              </div>
+
+              <label class="font1">{{arr.lhis_status_name}}</label>
+            </ion-row>
+
+          </ion-col>
+
+          <ion-col col-2>
+            <ion-row style="position:fixed; bottom:30px; right:30px">
+              <button ion-button color="danger" (click)="remove(i)">ยกเลิกใบลา</button>
+            </ion-row>
+          </ion-col>
+
+        </ion-row>
+      </ion-grid>
+    </ion-card>
+  </ion-item>
+</ion-content>
