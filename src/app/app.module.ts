@@ -4,7 +4,6 @@ import { IonicApp, IonicErrorHandler, IonicModule, Modal } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
 import { LeavePage } from '../pages/leave/leave';
 import { TimelinePage } from '../pages/timeline/timeline';
 
@@ -27,16 +26,24 @@ import { ModalWorkPageModule } from '../pages/modal-work/modal-work.module';
 import { ModalWorkPage } from '../pages/modal-work/modal-work';
 import { ModalSummerPageModule } from '../pages/modal-summer/modal-summer.module';
 import { ModalUpsetPageModule } from '../pages/modal-upset/modal-upset.module';
-import { List1Page } from '../pages/list1/list1';
-import { List2Page } from '../pages/list2/list2';
+import { HlApprovePage } from '../pages/hl-approve/hl-approve';
+import { DevApprovePage } from '../pages/dev-approve/dev-approve';
+import { CancleApplovePage } from '../pages/cancle-applove/cancle-applove';
+import { HlApprovePageModule } from '../pages/hl-approve/hl-approve.module';
+import { DevApprovePageModule } from '../pages/dev-approve/dev-approve.module';
+import { HlDetailPageModule } from '../pages/hl-detail/hl-detail.module';
+import { DevDetailPageModule } from '../pages/dev-detail/dev-detail.module';
+import { CancleApplovePageModule } from '../pages/cancle-applove/cancle-applove.module';
+import { ApproveDetailPageModule } from '../pages/approve-detail/approve-detail.module';
+
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    ListPage,
-    List1Page,
-    List2Page,
+    HlApprovePage,
+    DevApprovePage,
+    CancleApplovePage,
     LeavePage,
     TimelinePage,
     TimelineComponent,
@@ -53,15 +60,22 @@ import { List2Page } from '../pages/list2/list2';
     ModalSummerPageModule,
     ModalUpsetPageModule,
     ModalWorkPageModule,
+    HlApprovePageModule,
+    HlDetailPageModule,
+    DevApprovePageModule,
+    DevDetailPageModule,
+    CancleApplovePageModule,
+    ApproveDetailPageModule,
+    
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage,
     LeavePage,
-    List1Page,
-    List2Page,
+    HlApprovePage,
+    DevApprovePage,
+    CancleApplovePage,
     TimelinePage,
     ModalPage,
     ModalSummerPage,

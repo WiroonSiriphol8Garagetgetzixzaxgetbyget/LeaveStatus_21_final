@@ -1,0 +1,44 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>รายการอนุมัติลาไปราชการ</ion-title>
+     
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <ion-item *ngFor = "let data of approveDev " >
+  <ion-list (click)="Getdetail(data)"> 
+    <ion-grid >
+      <ion-row>
+
+        <!-- <ion-col col-2 class="grid1">
+          <img src="assets/imgs/profile.png">
+        </ion-col> -->
+
+        <ion-col col-8 class="grid2">
+
+            เลขที่ใบลา : <label class="font" align-self: center>{{data.dev_doc_no}} </label>
+            <br>
+            เรื่อง : <label class="font" align-self: center>ขออนุมัติไปราชการ/ประชุมบริหาร</label>
+            <br>
+            ชื่อผู้ลา : <label class="font" align-self: center>{{data.ps_fname}} {{data.ps_lname}}  </label>
+            <br>
+            ช่วงวันที่ประชุม : <label class="font" align-self: center>{{data.dev_start_date}} - {{data.dev_end_date}}</label>
+            <br>
+            ช่วงวันที่เดินทาง :<label class="font" align-self: center>{{data.dev_start_go_date}} - {{data.dev_end_go_date}}</label>
+            <br>
+            สถานที่จัดประชุม : <label class="font" align-self: center>{{data.dev_place}}</label>
+            <br>
+            วันที่ทำเรื่อง : <label class="font" align-self: center>{{data.dev_date}} </label>
+          
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-list>
+</ion-item> 
+</ion-content>

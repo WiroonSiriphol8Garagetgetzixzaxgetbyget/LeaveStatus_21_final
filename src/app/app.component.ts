@@ -4,10 +4,11 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
 import { LeavePage } from '../pages/leave/leave';
-import { List1Page } from '../pages/list1/list1';
-import { List2Page } from '../pages/list2/list2';
+import { HlApprovePage } from '../pages/hl-approve/hl-approve';
+import { DevApprovePage } from '../pages/dev-approve/dev-approve';
+import { CancleApplovePage } from '../pages/cancle-applove/cancle-applove';
+
 
 @Component({
   templateUrl: 'app.html'
@@ -25,9 +26,9 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'ข้อมูลทั่วไป', component: HomePage },
-      { title: 'List', component: ListPage },
-      { title: 'List1', component: List1Page },
-      { title: 'List2', component: List2Page },
+      { title: 'List', component: HlApprovePage },
+      { title: 'List1', component: DevApprovePage },
+      { title: 'List2', component: CancleApplovePage },
       { title: 'สถานะใบลา', component: LeavePage }
     ];
 

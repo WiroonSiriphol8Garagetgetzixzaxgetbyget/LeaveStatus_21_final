@@ -1,0 +1,40 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>รายการอนุมัติการยกเลิกการลา</ion-title>
+     
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <ion-item *ngFor = "let data of cancledata " >
+  <ion-list (click)="Getdetail(data)"> 
+    <ion-grid>
+      <ion-row>
+
+        <!-- <ion-col col-2 class="grid1">
+          <img src="assets/imgs/profile.png">
+        </ion-col> -->
+
+        <ion-col col-8 class="grid2">
+            ชื่อผู้ลา : <label class="font" align-self: center>{{data.ps_fname}} {{data.ps_lname}}  </label>
+            <br>
+                    
+            ประเภทการลา : <label class="font" align-self: center>{{data.leave_name}}</label>
+            <br>
+            จำนวนวันที่ยกเลิก : <label class="font" align-self: center>{{data.lc_num_day}} วัน</label>
+            <br>
+            ช่วงวันที่ยกเลิก : <label class="font" align-self: center>{{data.lc_start_date}} - {{data.lc_end_date}}</label>
+            <br>
+            วันที่ทำเรื่อง : <label class="font" align-self: center>{{data.lc_start_leave_date}} </label>
+          
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-list>
+</ion-item> 
+</ion-content>
