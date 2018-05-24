@@ -26,30 +26,32 @@ import { ModalWorkPageModule } from '../pages/modal-work/modal-work.module';
 import { ModalWorkPage } from '../pages/modal-work/modal-work';
 import { ModalSummerPageModule } from '../pages/modal-summer/modal-summer.module';
 import { ModalUpsetPageModule } from '../pages/modal-upset/modal-upset.module';
-import { HlApprovePage } from '../pages/hl-approve/hl-approve';
-import { DevApprovePage } from '../pages/dev-approve/dev-approve';
 import { CancleApplovePage } from '../pages/cancle-applove/cancle-applove';
-import { HlApprovePageModule } from '../pages/hl-approve/hl-approve.module';
-import { DevApprovePageModule } from '../pages/dev-approve/dev-approve.module';
-import { HlDetailPageModule } from '../pages/hl-detail/hl-detail.module';
-import { DevDetailPageModule } from '../pages/dev-detail/dev-detail.module';
-import { CancleApplovePageModule } from '../pages/cancle-applove/cancle-applove.module';
-import { ApproveDetailPageModule } from '../pages/approve-detail/approve-detail.module';
+import { ApproveDetailPage } from '../pages/approve-detail/approve-detail';
+import { DevApprovePage } from '../pages/dev-approve/dev-approve';
+import { DevDetailPage } from '../pages/dev-detail/dev-detail';
+import { HlApprovePage } from '../pages/hl-approve/hl-approve';
+import { HlDetailPage } from '../pages/hl-detail/hl-detail';
+import { LeaveServiceProvider } from '../providers/show/leave-service';
 
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    HlApprovePage,
-    DevApprovePage,
-    CancleApplovePage,
     LeavePage,
     TimelinePage,
     TimelineComponent,
     TimelineItemComponent,
-    TimelineTimeComponent
-    
+    TimelineTimeComponent,
+    CancleApplovePage,
+    ApproveDetailPage,
+    // OpinionPage,
+    DevApprovePage,
+    DevDetailPage,
+    HlApprovePage,
+    HlDetailPage,
+
   ],
   imports: [
     BrowserModule,
@@ -60,34 +62,32 @@ import { ApproveDetailPageModule } from '../pages/approve-detail/approve-detail.
     ModalSummerPageModule,
     ModalUpsetPageModule,
     ModalWorkPageModule,
-    HlApprovePageModule,
-    HlDetailPageModule,
-    DevApprovePageModule,
-    DevDetailPageModule,
-    CancleApplovePageModule,
-    ApproveDetailPageModule,
-    
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
     LeavePage,
-    HlApprovePage,
-    DevApprovePage,
-    CancleApplovePage,
     TimelinePage,
     ModalPage,
     ModalSummerPage,
     ModalUpsetPage,
     ModalWorkPage,
+    CancleApplovePage,
+    ApproveDetailPage,
+    // OpinionPage,
+    DevApprovePage,
+    DevDetailPage,
+    HlApprovePage,
+    HlDetailPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
     ShowProvider,
-    ServiceLeaveProvider
+    ServiceLeaveProvider,
+    LeaveServiceProvider
   ]
 })
-export class AppModule {}
+export class AppModule { }

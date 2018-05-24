@@ -6,8 +6,6 @@ import { ModalUpsetPage } from '../modal-upset/modal-upset';
 import { ModalWorkPage } from '../modal-work/modal-work';
 import { ModalSummerPage } from '../modal-summer/modal-summer';
 
-
-
 @IonicPage()
 @Component({
   selector: 'page-home',

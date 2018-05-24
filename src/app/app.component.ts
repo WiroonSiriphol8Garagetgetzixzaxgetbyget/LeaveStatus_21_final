@@ -26,9 +26,9 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'ข้อมูลทั่วไป', component: HomePage },
-      { title: 'List', component: HlApprovePage },
-      { title: 'List1', component: DevApprovePage },
-      { title: 'List2', component: CancleApplovePage },
+      { title: 'อนุมัติการลาปกติ', component: HlApprovePage },
+      { title: 'อนุมัติการลาไปราชการ', component: DevApprovePage },
+      { title: 'อนุมัติการยกเลิกการลา', component: CancleApplovePage },
       { title: 'สถานะใบลา', component: LeavePage }
     ];
 
