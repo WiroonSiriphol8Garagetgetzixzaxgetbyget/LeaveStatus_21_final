@@ -2,7 +2,7 @@
 #contact {
     font-size: 100px; //Preferred size here
     margin-top: 30px;
-    margin-left: 37%;
+    margin-left: 40%;
     color: rgb(0, 162, 255);
 }
 h1,h3,p{
@@ -15,6 +15,7 @@ p{
     height: 50px;
     color: white;
     background-color:   rgb(0, 162, 255);
+    text-align: center;
 }
 #status2{
     height: 50px;
@@ -38,6 +39,7 @@ h1{
     height: 50px;
     font-size: 120%;
     background-color:   rgb(0, 162, 255);
+    text-align: center;
 }
 .data_modal{
     color : white;
@@ -49,7 +51,12 @@ h1{
     font-size: 15px;
     height: 50px;
     margin-left: 15px;
+    text-align: center;
 }
 #header{
+    text-align: center;
+}
+
+.cen{
     text-align: center;
 }

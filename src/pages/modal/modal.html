@@ -14,7 +14,7 @@
 
 
 <ion-content padding>
-  <table border="1" style = "width : 100%">
+  <table border="1" style="width : 100%">
     <thead>
       <tr>
         <th>ลำดับ</th>
@@ -23,24 +23,26 @@
         <th>เวลาออกงาน</th>
       </tr>
     </thead>
-      <tr>
-        <th colspan = "4" id = "span">สายและการออกก่อนเวลา</th>
-      </tr>
-      <tbody *ngFor="let person of attention_person,let i = index">
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
+    <tr>
+      <!-- <th colspan="4" id="span">สายและการออกก่อนเวลา</th> -->
+    </tr>
+    <tbody *ngFor="let person of attention_person,let i = index">
+      <div *ngIf="person == NULL">
+        <ion-icon name="ios-time" color="secondary"></ion-icon>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </div>
     </tbody>
   </table>
 </ion-content>
 <ion-footer>
   <ion-navbar>
-      <ion-buttons end>
-    <button ion-button (click) = "close_modal()">Close</button>
-  </ion-buttons>
+    <ion-buttons end>
+      <button ion-button (click)="close_modal()">Close</button>
+    </ion-buttons>
   </ion-navbar>
 </ion-footer>
-

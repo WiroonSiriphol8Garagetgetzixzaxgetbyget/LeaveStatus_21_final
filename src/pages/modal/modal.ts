@@ -15,7 +15,7 @@ import { ViewController } from 'ionic-angular/navigation/view-controller';
   templateUrl: 'modal.html',
 })
 export class ModalPage {
-  attention_person : {};
+  attention_person : any;
   count_attention_person : {};
   NOT_attention_person : NOT_attention_person[];
   count_NOT_attention_person : {};
@@ -45,7 +45,8 @@ interface NOT_attention_person {
   tio_id : number;
   ws_name : String;
 }
-// interface date_NOT_attention{
 
-// }
+interface date_NOT_attention{
+
+}
 

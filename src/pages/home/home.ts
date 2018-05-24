@@ -20,7 +20,8 @@ export class HomePage {
   public NOT_attention_person: {};
   public count_NOT_attention_person: person[];
   public date_NOT_attention: {};
-  public count_all: {};
+  // public count_all: {};
+  public profile : person[];
   constructor(public navCtrl: NavController, public navParams: NavParams, private modal: ModalController, private leave_person_provider: ServiceLeaveProvider) {
   }
 
@@ -32,9 +33,9 @@ export class HomePage {
       this.NOT_attention_person = data.NOT_attention_person;
       this.count_NOT_attention_person = data.count_NOT_attention_person
       this.date_NOT_attention = data.date_NOT_attention;
-      this.count_all = data.count_all;
-      console.log(this.count_NOT_attention_person);
-
+      // this.count_all = data.count_all;
+      this.profile = data.profile;
+      console.log(this.profile);
     });
   }
 
@@ -45,10 +46,11 @@ export class HomePage {
       NOT_attention_person: this.NOT_attention_person,
       count_NOT_attention_person: this.count_NOT_attention_person,
       date_NOT_attention: this.date_NOT_attention,
-      count_all: this.count_all,
+      // count_all: this.count_all,
     });
     myModal.present();
   }
+
   show_modal_work() {
     const myModal = this.modal.create(ModalPage, {
       attention_person: this.attention_person,
@@ -56,10 +58,11 @@ export class HomePage {
       NOT_attention_person: this.NOT_attention_person,
       count_NOT_attention_person: this.count_NOT_attention_person,
       date_NOT_attention: this.date_NOT_attention,
-      count_all: this.count_all,
+      // count_all: this.count_all,
     });
     myModal.present();
   }
+
   show_modal_upset(event, $arr_leave_person) {
     const myModal = this.modal.create(ModalUpsetPage, {
       attention_person: this.attention_person,
@@ -67,10 +70,11 @@ export class HomePage {
       NOT_attention_person: this.NOT_attention_person,
       count_NOT_attention_person: this.count_NOT_attention_person,
       date_NOT_attention: this.date_NOT_attention,
-      count_all: this.count_all,
+      // count_all: this.count_all,
     });
     myModal.present();
   }
+
   show_modal_summer() {
     const myModal = this.modal.create(ModalSummerPage, {
       attention_person: this.attention_person,
@@ -78,7 +82,7 @@ export class HomePage {
       NOT_attention_person: this.NOT_attention_person,
       count_NOT_attention_person: this.count_NOT_attention_person,
       date_NOT_attention: this.date_NOT_attention,
-      count_all: this.count_all,
+      // count_all: this.count_all,
     });
     myModal.present();
   }

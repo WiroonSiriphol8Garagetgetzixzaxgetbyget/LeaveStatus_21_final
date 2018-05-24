@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
-import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { IonicApp, IonicErrorHandler, IonicModule, Modal } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -19,6 +19,14 @@ import { ShowProvider } from '../providers/show/show';
 import { ServiceLeaveProvider } from '../providers/show/service-leave';
 
 import { HttpModule } from '@angular/http';
+import { ModalPage } from '../pages/modal/modal';
+import { ModalPageModule } from '../pages/modal/modal.module';
+import { ModalSummerPage } from '../pages/modal-summer/modal-summer';
+import { ModalUpsetPage } from '../pages/modal-upset/modal-upset';
+import { ModalWorkPageModule } from '../pages/modal-work/modal-work.module';
+import { ModalWorkPage } from '../pages/modal-work/modal-work';
+import { ModalSummerPageModule } from '../pages/modal-summer/modal-summer.module';
+import { ModalUpsetPageModule } from '../pages/modal-upset/modal-upset.module';
 
 @NgModule({
   declarations: [
@@ -36,7 +44,11 @@ import { HttpModule } from '@angular/http';
     BrowserModule,
     IonicModule.forRoot(MyApp),
     HttpModule,
-    FormsModule
+    FormsModule,
+    ModalPageModule,
+    ModalSummerPageModule,
+    ModalUpsetPageModule,
+    ModalWorkPageModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -44,7 +56,11 @@ import { HttpModule } from '@angular/http';
     HomePage,
     ListPage,
     LeavePage,
-    TimelinePage
+    TimelinePage,
+    ModalPage,
+    ModalSummerPage,
+    ModalUpsetPage,
+    ModalWorkPage,
   ],
   providers: [
     StatusBar,

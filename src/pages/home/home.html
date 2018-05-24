@@ -8,25 +8,28 @@
 </ion-header>
 
 <ion-content padding>
-  <div *ngFor="let item of count_NOT_attention_person">
-    <ion-icon id="contact" name="md-contact" item-start large></ion-icon>
-    <h1>{{item.NAME}}</h1>
-    <h3>{{item.hire_name}}</h3>
+  <div *ngFor="let item of profile">
+
+    <ion-icon id="contact" name="md-contact" item-start large padding></ion-icon>
+
+    <h1 class="cen">{{item.NAME}}</h1>
+    <h3 class="cen">{{item.hire_name}}</h3>
     <br>
     <div id="status">
-      <span id="status2" align="center">สถานะการมาทำงาน</span>
+      <label style="font-size: 18px;">สถานะการมาทำงาน</label>
       <br>
-      <span id="status3">ณ วันที่ {{item.time_end}}</span>
+      <span style="font-size: 16px;">ณ วันที่ {{item.time_end}}</span>
     </div>
-    <ion-item>
+    <br>
+    <!-- <ion-item>
       <div id="time">
         <span>เวลาเข้า-ออกงาน : 00.00น. - 00.00น.</span>
       </div>
-    </ion-item>
+    </ion-item> -->
     <div id="history">
-      <span id="status2">ประวัติการมาทำงาน</span>
+      <span style="font-size: 18px;">ประวัติการมาทำงาน</span>
       <br>
-      <span id="status3">ตั้งแต่วันที่ {{item.time_start}} ถึง {{item.time_end}}</span>
+      <span style="font-size: 16px;">ตั้งแต่วันที่ {{item.time_start}} ถึง {{item.time_end}}</span>
     </div>
     <br>
     <ion-list>
