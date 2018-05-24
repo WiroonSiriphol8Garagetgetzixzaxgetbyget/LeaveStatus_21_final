@@ -102,4 +102,5 @@ interface person {
   hire_name: String;
   time_start: String;
   time_end: String;
+  time_now : String;
 }
